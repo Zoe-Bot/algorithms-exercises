@@ -19,3 +19,26 @@ function ggT(x, y) {
 // Tests
 console.assert(ggT(63, 27) == 9, "63 27")
 console.assert(ggT(24, 36) == 12, "24 36")
+
+
+/* Aufgabe 1.4 */
+function isPrime(x, i = 10) {
+    if (i == 1)
+        return true
+    else
+        if (x == i)
+            return isPrime(x, i - 1)
+        else {
+            if (x % i == 0)
+                return false
+            else
+                return isPrime(x, i - 1)
+        }
+}
+
+// Test
+console.assert(isPrime(7) == true, "7")
+console.assert(isPrime(10) == false, "7")
+console.assert(isPrime(37) == true, "7")
+console.assert(isPrime(19) == true, "7")
+console.assert(isPrime(745) == false, "7")
