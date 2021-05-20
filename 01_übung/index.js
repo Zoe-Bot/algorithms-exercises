@@ -1,6 +1,6 @@
 /* Aufgabe 1.3 */
 /**
- * 
+ *  Berechnet Größten Gemeinsamen Teiler zweier Zahlen
  * @param {Number} x erste Zahl 
  * @param {*} y zweite Zahl
  * @returns größter Gemeinsamer Teiler von x und y
@@ -22,6 +22,12 @@ console.assert(ggT(24, 36) == 12, "24 36")
 
 
 /* Aufgabe 1.4 */
+/**
+ * Gitb zurück ob es sich bei der gegebenen Nummer um einen Primzahl handelt
+ * @param {Number} x zu überprüfende Nummer
+ * @param {Number} i default
+ * @returns boolean ob es eine primzahl ist oder nicht
+ */
 function isPrime(x, i = 10) {
     if (i == 1)
         return true
