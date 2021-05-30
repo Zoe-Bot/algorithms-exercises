@@ -31,7 +31,6 @@ function diffArray(arr1, arr2) {
         }
     }
 
-    console.log(res)
     return res
 }
 
@@ -39,19 +38,19 @@ function arraysEqual(a, b) {
     if (a === b) return true;
     if (a == null || b == null) return false;
     if (a.length !== b.length) return false;
-  
+
     // If you don't care about the order of the elements inside
     // the array, you should sort both arrays here.
     // Please note that calling sort on an array will modify that array.
     // you might want to clone your array first.
-  
+
     for (var i = 0; i < a.length; ++i) {
-      if (a[i] !== b[i]) return false;
+        if (a[i] !== b[i]) return false;
     }
     return true;
-  }
+}
 
 console.assert(arraysEqual(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]), [4]), "[1, 2, 3, 5], [1, 2, 3, 4, 5]")
 arr1 = ["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"]
-arr2 =  ["diorite", "andesite", "grass", "dirt", "dead shrub"]
+arr2 = ["diorite", "andesite", "grass", "dirt", "dead shrub"]
 console.assert(arraysEqual(diffArray(arr1, arr2), ["pink wool"]), "pink wool")
