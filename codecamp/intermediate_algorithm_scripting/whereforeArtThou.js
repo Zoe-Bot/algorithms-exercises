@@ -13,8 +13,6 @@ function whatIsInAName(collection, source) {
     for (let i = 0; i < collection.length; i++) {
         let isInSourceKeys = true;
         for (let j = 0; j < sourceKeys.length; j++) {
-            console.log(collection[i][sourceKeys[j]])
-            console.log(source[sourceKeys[j]])
             if (!(collection[i][sourceKeys[j]] === source[sourceKeys[j]])) {
                 isInSourceKeys = false;
             }
