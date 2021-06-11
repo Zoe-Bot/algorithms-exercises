@@ -1,20 +1,17 @@
-function bubblesort(unsorted) {
-    let sorted = []
+function bubblesort(arr) {
     let cache = 0
 
-    while(unsorted.length != 0) {
-        for (let i = 0; i < unsorted.length; i++) {
-            if (unsorted[i] > unsorted[i + 1]) {
-                cache = unsorted[i]
-                unsorted[i] = unsorted[i + 1]
-                unsorted[i + 1] = cache
+    for (let j = 0; j < arr.length; j++) {
+        for (let i = 0; i < arr.length - j; i++) {
+            if (arr[i] > arr[i + 1]) {
+                cache = arr[i]
+                arr[i] = arr[i + 1]
+                arr[i + 1] = cache
             }
         }
-        sorted.unshift(unsorted[unsorted.length - 1])
-        unsorted.pop()
     }
 
-    return sorted
+    return arr
 }
 
 
