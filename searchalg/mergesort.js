@@ -8,11 +8,10 @@ function merge(left, right) {
             res.push(right.shift())
     }
 
-    console.log(res)
     return [...res, ...left, ...right]
 }
 
-console.log(merge([3, 4, 5], [2, 9, 11]))
+//console.log(merge([3, 4, 5], [2, 9, 11]))
 
 function mergeSort(arr) {
     const half = arr.length / 2
@@ -21,8 +20,9 @@ function mergeSort(arr) {
         return arr
 
     const left = arr.splice(0 , half)
+    //console.log(left, arr)
     return merge(mergeSort(left), mergeSort(arr))
 }
 
 arr = [4, 2, 6, 11, 3]
-console.log(mergeSort(arr))
+mergeSort(arr)
